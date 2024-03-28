@@ -39,6 +39,15 @@ function receberPorcentagem(evento) {
             botao.classList.add("botao-ativo")
         }
     })
+    
+    if(evento.target.value !== "") {
+        porcentagem = parseFloat(evento.target.value) / 100
+    } else {
+        porcentagem = 0
+    }
 
-   porcentagem = parseFloat(evento.target.value) / 100
+   console.log(porcentagem)
 }
+
+const gorjetaInput = document.querySelector("#outra")
+gorjetaInput.addEventListener("input", receberPorcentagem)
